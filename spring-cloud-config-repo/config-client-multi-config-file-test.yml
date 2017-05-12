@@ -1,0 +1,16 @@
+spring:
+  profiles: test
+#Apache Kafka Binder for bus-kafka
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: 112.74.16.8:9092
+          #defaultBrokerPort: 9092
+          zkNodes: 112.74.16.8:2181
+          #defaultZkPort: 2181
+  thymeleaf.cache: false
+logging.level.org.springframework.security: DEBUG
+# custom properties
+config-client2-welcome: hello, welcome to my test world
+

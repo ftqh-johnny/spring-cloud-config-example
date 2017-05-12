@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  #Config Server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ftqh-johnny/spring-cloud-config-example
+          searchPaths: spring-cloud-config-repo
+---
+spring:
+  profiles: docker
+---
+spring:
+  profiles: test

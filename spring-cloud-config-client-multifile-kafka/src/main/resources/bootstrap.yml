@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: config-client-multi-config-file-kafka
+  profiles:
+    active: dev
+---
+spring:
+  profiles: docker
+  cloud:
+    config:
+      failFast: true
+      uri: http://config-service:8888
+---
+spring:
+  profiles: dev
+  cloud:
+    config:
+      failFast: true
+      uri: http://localhost:8888
+---
+spring:
+  profiles: cloud
+  cloud:
+    config:
+      failFast: true
+      uri: ${vcap.services.config-service.credentials.uri:http://localhost:8888}
