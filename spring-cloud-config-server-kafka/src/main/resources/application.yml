@@ -7,11 +7,6 @@ security:
 management:
   security:
     enabled: false
-#Registering with Eureka
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
 spring:
 #Apache Kafka Binder for bus-kafka
   cloud:
