@@ -1,6 +1,6 @@
 spring:
   application:
-    name: config-client-multi-config-file-kafka
+    name: config-client-multi-config-file
   profiles:
     active: dev
 ---
